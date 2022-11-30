@@ -40,3 +40,21 @@ header nav li{
     font-size: 20px;
 }
 
+#work div{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10%;
+}
+
+#work #first{
+    flex: 100% 0 0;
+}
+
+#work .rest{
+    flex: 1 0 0;
+}
+
+#work img{
+    width: 100%;
+    min-width: 400px;
+}
