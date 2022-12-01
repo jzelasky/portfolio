@@ -47,7 +47,7 @@ header nav li{
 #work div{
     display: flex;
     flex-wrap: wrap;
-    padding: 10%;
+    padding: 0 10%;
 }
 
 #work #first{
@@ -61,6 +61,28 @@ header nav li{
 #work img{
     width: 100%;
     min-width: 400px;
+    border: solid 3px darkolivegreen;
+    margin: 10px;
+}
+
+#work img:hover{
+    box-shadow: 0 0 20px 5px #48abe0;
+}
+
+#work section{
+    position: relative;
+}
+
+#work h3{
+    z-index: 100;
+    position: absolute;
+    background-color: navy;
+    font-size: 25px;
+    left: 5%;
+    top: 5%;
+    padding: 10px;
+    border: black solid 3px;
+    color: white;
 }
 
 #contact{
