@@ -1,28 +1,45 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #431c61;
+    color: lightblue;
 }
 
 h1{
-    font-size: 40px;
+    font-size: 45px;
     display: inline-block;
+    text-shadow: 1px 1px 2px black;
+    margin-left: 20px;
 }
 
 h2{
     font-size: 30px;
+    text-shadow: 1px 1px 2px black;
 }
 
 header{
     background-color: lightskyblue;
-    color: rgb(45, 2, 63);
+    color: #431c61;
     padding: 20px;
+    box-shadow: 5px 5px 10px #2a123d;
 }
 
 header nav{
     float: right;
 }
 
+
 header nav li{
     display: inline-block;
+    font-size: 25px;
+    padding: 20px;
+}
+
+main{
+    margin: 0 5%;
+}
+
+#about p{
+    padding-right: 15px;
 }
 
 #about div{
@@ -33,6 +50,8 @@ header nav li{
 
 #about div img{
     max-width: 100%;
+    border: inset 4px darkblue;
+    box-shadow: 5px 5px 10px #2a123d;
 }
 
 #about div aside{
@@ -61,12 +80,13 @@ header nav li{
 #work img{
     width: 100%;
     min-width: 400px;
-    border: solid 3px darkolivegreen;
+    border: inset 4px darkblue;
     margin: 10px;
+    box-shadow: 5px 5px 10px #2a123d;
 }
 
 #work img:hover{
-    box-shadow: 0 0 20px 5px #48abe0;
+    border: inset 4px yellowgreen;
 }
 
 #work section{
@@ -81,18 +101,24 @@ header nav li{
     left: 5%;
     top: 5%;
     padding: 10px;
-    border: black solid 3px;
+    border: #2a123d outset 3px;
     color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 #contact{
     background-color: lightskyblue;
+    color: #431c61;
     padding: 10px;
+}
+
+#contact h3{
+    font-size: 30px;
 }
 
 #contact ul{
     list-style: none;
-    margin: 0 5% 2% 10%;
+    margin: 0 5% 5% 10%;
     font-size: 25px;
     display: flex;
     justify-content: space-between;
