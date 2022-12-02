@@ -50,8 +50,9 @@ main{
 
 #about div img{
     max-width: 150px;
-    border: inset 4px darkblue;
+    border: outset 2px darkslategrey;
     box-shadow: 5px 5px 10px #2a123d;
+    border-radius: 2px;
 }
 
 #about div aside{
@@ -80,13 +81,14 @@ main{
 #work img{
     width: 100%;
     min-width: 400px;
-    border: inset 4px darkblue;
+    border: outset 4px darkslategrey;
+    border-radius: 2px;
     margin: 10px;
     box-shadow: 5px 5px 10px #2a123d;
 }
 
 #work img:hover{
-    border: inset 4px yellowgreen;
+    border: outset 4px yellowgreen;
 }
 
 #work section{
@@ -96,10 +98,10 @@ main{
 #work h3{
     z-index: 100;
     position: absolute;
-    background-color: navy;
+    background-color: rgba(47, 79, 79, .5);
     font-size: 25px;
     left: 5%;
-    top: 5%;
+    bottom: 5%;
     padding: 10px;
     border: #2a123d outset 3px;
     color: white;
@@ -110,6 +112,7 @@ main{
     background-color: lightskyblue;
     color: #431c61;
     padding: 10px;
+    box-shadow: 5px 5px 10px #2a123d;
 }
 
 #contact h3{
@@ -135,10 +138,6 @@ main{
     #work img{
         min-width: 250px;
     }
-    #about div{
-        display: flex;
-        flex-direction: column;
-    }
     header nav li{
         display: block;
         float: left
@@ -150,5 +149,12 @@ main{
     }
     #contact ul{
         display: block;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #about div{
+        display: flex;
+        flex-direction: column;
     }
 }
