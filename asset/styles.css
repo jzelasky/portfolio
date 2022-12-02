@@ -49,7 +49,7 @@ main{
 }
 
 #about div img{
-    max-width: 100%;
+    max-width: 150px;
     border: inset 4px darkblue;
     box-shadow: 5px 5px 10px #2a123d;
 }
@@ -123,4 +123,32 @@ main{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1205px){
+    #work img{
+        min-width: 300px;
+    }
+}
+
+@media screen and (max-width: 927px){
+    #work img{
+        min-width: 250px;
+    }
+    #about div{
+        display: flex;
+        flex-direction: column;
+    }
+    header nav li{
+        display: block;
+        float: left
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    #contact ul{
+        display: block;
+    }
 }
