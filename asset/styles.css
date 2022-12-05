@@ -86,7 +86,7 @@ main{
 
 #work .rest{
     flex: 1 0 0;
-    max-width: 415px;
+    max-width: 50%;
 }
 
 
@@ -153,6 +153,9 @@ main{
 @media screen and (max-width: 950px){
     #work img{
         min-width: 250px;
+    }
+    #work .rest{
+        max-width: none;
     }
     header nav li{
         display: block;
