@@ -6,4 +6,4 @@ To use this webpage either scroll to see content or click on one of the links at
 
 This webpage is formatted to be used on any size screen. 
 
-![screenshot of live webpage](./asset/screenshot.png)
+![screenshot of live webpage](./assets/img/portfolio-screenshot.png)
