@@ -5,51 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J. Zelasky Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body>
-    <header>
-        <h1>Jessica Zelasky</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div>
-                <p>I recently graduated of the University of Connecticut with a Bachelor's degree in mathematics. I currently working on a bootcamp course on full stack web development. I will be seeking a position as a full stack web developer come May 2023. In my free time I enjoy spending time with my dog, reading, and crafting.</p>
-                <aside>
-                    <img src="./assets/img/profile-pic.jpg">
-                </aside>
+<body class="bg-custom">
+    <div class="d-flex justify-content-center">
+        <h1 class="name"></h1>
+    </div>
+    <div class="d-flex justify-content-center m-2">
+        <a class="links" id="aboutLink">About</a>
+        <a class="links" id="workLink">Work</a>
+        <a class="links" id="contactLink">Contact</a>
+    </div>
+    <section class="aboutWorkContact d-flex justify-content-center m-5 text-white"></section>
+    <section class="d-flex justify-content-center m-5 text-white">
+        <ul >
+            <li id="phone"></li>
+            <li><a id="email" href="mailto:jzelasky@gmail.com"></a></li>
+            <li><a id="linkedIn" href="www.linkedin.com/in/jessica-zelasky"></a></li>
+            <li><a id="github" href="https://github.com/jzelasky"></a></li>
+        </ul>
+    </section>
+    <div id="myModal" class="modal" >
+        <div class="modal-content" style="width:65%">
+            <span class="close">&times;</span>
+            <!-- Container for the image gallery -->
+            <div class="container">
+
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                    <div class="numbertext">
+                        1 / 6
+                    </div>
+                    <img src="./assets/img/tech-blog-screenshot.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">
+                        2 / 6
+                    </div>
+                    <img src="./assets/img/health-note-tracker-screenshot.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">
+                        3 / 6
+                    </div>
+                    <img src="./assets/img/weather-dashboard-screenshot.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">
+                        4 / 6
+                    </div>
+                    <img src="./assets/img/breaking-dad-screenshot.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">
+                        5 / 6
+                    </div>
+                    <img src="./assets/img/coding-quiz-screenshot.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">
+                        6 / 6
+                    </div>
+                    <img src="./assets/img/password-generator-screenshot.png" style="width:100%">
+                </div>
+                
+  
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+                <!-- Image text -->
+                <div class="caption-container">
+                <p id="caption"></p>
+                </div>
+  
+                <!-- Thumbnail images -->
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="./assets/img/tech-blog-screenshot.png" style="width:100%" onclick="currentSlide(1)" alt="Tech Blog Description">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./assets/img/health-note-tracker-screenshot.png" style="width:100%" onclick="currentSlide(2)" alt="Health Note Tracker Description">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./assets/img/weather-dashboard-screenshot.png" style="width:100%" onclick="currentSlide(3)" alt="Weather Dashboard Description">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./assets/img/breaking-dad-screenshot.png" style="width:100%" onclick="currentSlide(4)" alt="Breaking Dad">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./assets/img/coding-quiz-screenshot.png" style="width:100%" onclick="currentSlide(5)" alt="Coding Quiz">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./assets/img/password-generator-screenshot.png" style="width:100%" onclick="currentSlide(6)" alt="Password Generator">
+                    </div>
+    
+                </div>
             </div>
-        </section>
-        <section id="work">
-            <h2>Work</h2>
+        </div>
+      </div>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
+
+<!--
+    <h2>Work</h2>
             <div>
                 <section id="first">
-                    <a href="https://jzelasky.github.io/WeatherDashboard/"><img src="./assets/img/weather-dashboard-screenshot.png"></a>
+                    <a href="https://jzelasky.github.io/WeatherDashboard/"><img src=""></a>
                 </section>
                 <section id="rest">
-                    <a href="https://thawing-retreat-86324.herokuapp.com/"><img src="./assets/img/health-note-tracker-screenshot.png"></a>
+                    <a href="https://thawing-retreat-86324.herokuapp.com/"><img src=""></a>
                 </section>
                 <section class="rest">
-                    <a href="https://jzelasky.github.io/workDayScheduler/"><img src="./assets/img/work-day-scheduler-screenshot.png"></a>
+                    <a href="https://jzelasky.github.io/workDayScheduler/"><img src=""></a>
                 </section>
                 <section class="rest">
-                    <a href="https://sleepy-coast-83204.herokuapp.com/"><img src="./assets/img/noteTaker-screenshot.png"></a>
+                    <a href="https://sleepy-coast-83204.herokuapp.com/"><img src=""></a>
                 </section>
                 <section class="rest">
-                    <a href="https://cellopudding.github.io/BreakingDad/"><img src="./assets/img/breaking-dad-screenshot.png"></a>
+                    <a href="https://cellopudding.github.io/BreakingDad/"><img src=""></a>
                 </section>
             </div>
-        </section>
-    </main>
-   <section id="contact">
+    <section id="contact">
         <h3>Contact:</h3>
         <ul>
             <li>(860) 884-0629</li>
@@ -58,5 +138,4 @@
             <li><a href="https://www.linkedin.com/in/jessica-zelasky/">LinkedIn</a></li>
         </ul>
 </section>
-</body>
-</html>
+-->

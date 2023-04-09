@@ -1,180 +1,188 @@
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #431c61;
-    color: lightblue;
+.bg-custom {
+    background-color: black !important;
 }
 
+.name {
+    font-size: 500% !important;
+    margin-top: 15% !important;
+    color: white !important;
+    font-family: 'Press Start 2P' !important;
 
-/***HEADER***/
-h1{
-    font-size: 45px;
-    display: inline-block;
-    text-shadow: 1px 1px 2px black;
-    margin-left: 20px;
+    transition-property: margin-top, font-size !important;
+    transition-timing-function: ease-in-out !important;
+    transition-duration: 1.5s !important;
 }
 
-header{
-    background-color: lightskyblue;
-    color: #431c61;
+.name-transformed-state {
+    margin-top: 3% !important;
+    font-size: 200% !important;
+    transition-property: margin-top, font-size !important;
+    transition-timing-function: ease-in-out !important;
+    transition-duration: 1.5s !important;
+}
+
+@media only screen and (max-width: 700px) {
+    .name {
+        font-size: 300% !important;
+        margin-top: 50% !important;
+    }
+}
+
+.links {
+    font-size: 170% !important;
+    font-family: 'Press Start 2P' !important;
+    margin: 10px 30px !important;
+    color: black !important;
+    cursor: pointer !important;
+    
+    transition-property: color, font-size !important;
+    transition-timing-function: ease-in-out !important;
+    transition-duration: 1.5s !important;
+}
+
+.links-transformed-state-1 {
+    color: white !important;
+    font-size: 170% !important;
+    transition-property: color, font-size !important;
+    transition-timing-function: ease-in-out !important;
+    transition-duration: 1.5s !important;
+}
+
+.links-transformed-state-2 {
+    color: white !important;
+    font-size: 100% !important;
+    transition-property: color, font-size !important;
+    transition-timing-function: ease-in-out !important;
+    transition-duration: 1.5s !important;
+}
+
+section {
+    font-family: monospace !important;
+    font-size: 200% !important;
+}
+
+ul {
+    list-style-type: none !important;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    box-shadow: 5px 5px 10px #2a123d;
-}
-
-header nav{
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
     float: right;
-}
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-
-header nav li{
-    display: inline-block;
-    font-size: 25px;
-    padding: 20px;
-}
-
-
-/***ABOUT ME AND WORK***/
-
-h2{
-    font-size: 30px;
-    text-shadow: 1px 1px 2px black;
-}
-
-
-main{
-    margin: 0 5%;
-}
-
-/***ABOUT ME***/
-
-#about p{
-    padding-right: 15px;
-}
-
-#about div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#about div img{
-    max-width: 150px;
-    border: outset 2px darkslategrey;
-    box-shadow: 5px 5px 10px #2a123d;
-    border-radius: 2px;
-}
-
-#about div aside{
-    flex-basis: 60%;
-}
-
-#about div p{
-    padding-left: 20px;
-    font-size: 20px;
-}
-
-/***WORK***/
-
-#work div{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 10%;
-}
-
-#work #first{
-    flex: 100% 0 0;
-}
-
-#work .rest{
-    flex: 1 0 0;
-    max-width: 50%;
-    padding: 20px;
-}
-
-
-#work img{
-    width: 100%;
-    min-width: 400px;
-    border: outset 4px darkslategrey;
-    border-radius: 2px;
-    margin: 10px;
-    box-shadow: 5px 5px 10px #2a123d;
-}
-
-#work img:hover{
-    border: outset 4px yellowgreen;
-}
-
-#work section{
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
     position: relative;
-}
-
-/*#work h3{
-    z-index: 100;
+    box-sizing: border-box;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
     position: absolute;
-    background-color: rgba(47, 79, 79, .5);
-    font-size: 25px;
-    left: 5%;
-    bottom: 5%;
-    padding: 10px;
-    border: #2a123d outset 3px;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
     color: white;
-    text-shadow: 1px 1px 2px black;
-}*/
-
-/***CONTACT***/
-
-#contact{
-    background-color: lightskyblue;
-    color: #431c61;
-    padding: 10px;
-    box-shadow: 5px 5px 10px #2a123d;
-}
-
-#contact h3{
-    font-size: 30px;
-}
-
-#contact ul{
-    list-style: none;
-    margin: 0 5% 5% 10%;
-    font-size: 25px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-/***MEDIA QUERIES***/
-
-@media screen and (max-width: 1200px){
-    #work img{
-        min-width: 300px;
-    }
-}
-
-@media screen and (max-width: 950px){
-    #work img{
-        min-width: 250px;
-    }
-    #work .rest{
-        max-width: none;
-    }
-    header nav li{
-        display: block;
-        float: left
-    }
-    header{
-        display: flex;
-        flex-direction: column;
-        padding: 0px;
-    }
-    #contact ul{
-        display: block;
-    }
-}
-
-@media screen and (max-width: 600px){
-    #about div{
-        display: flex;
-        flex-direction: column;
-    }
-}
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
